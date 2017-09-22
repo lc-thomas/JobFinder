@@ -94,7 +94,6 @@ class JobFinder():
                                 self.cache.append(offer_id)
                                 recruiter_name, recruiter_mail = self.get_offer_detail(offer_id)
                                 if not recruiter_name or not recruiter_mail:continue
-
                                 try :
                                     recruiter_mail = re.search(r'[\w\.-]+@[\w\.-]+', recruiter_mail).group(0)
                                 except AttributeError as e:
