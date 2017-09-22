@@ -51,9 +51,6 @@ class JobFinder():
         parser.add_argument('-t', '--test', nargs='?', help="Envoyer quelques mails de test à l'adresse indiquée, eg: --test moi@domain.tld", required=False)
         parser.add_argument('-s', '--send', nargs='?', help="Envoyer les mails à tous les destinataires de la base d'adresses, eg: --send moi@gmail.com", required=False)
         self.args = parser.parse_args()
-        if self.args.help:
-            parser.print_help()
-            self.exit()
         if not self.args.france and not self.args.departements:
             self.log("SVP veuillez renseigner la zone de recherche (eg : --france ou --departements 75,92,...)", 'error')
             parser.print_help()
