@@ -1,6 +1,9 @@
 # JobFinder
 Parser pour pole-emploi + Envoi de mail
 
+Noter que chaque fichier PDF du dossier sera envoyé en pièce jointe du mail.
+
+
 ```
 usage: JobFinder.py [-h] [-f] [-d [DEPARTEMENTS]] -k [KEYWORDS] [-t [TEST]]
                     [-s [SEND]]
