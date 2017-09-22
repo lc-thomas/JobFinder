@@ -44,13 +44,12 @@ class JobFinder():
 
     def parse_args(self):
         self.log('Parsing args')
-        parser = argparse.ArgumentParser(add_help = False)
+        parser = argparse.ArgumentParser()
         parser.add_argument('-f', '--france', help='Recherche dans toute la France', required=False, action='store_true')
         parser.add_argument('-d', '--departements', nargs='?', help='Recherche par département, eg: --departements 71,75,92,95', required=False)
         parser.add_argument('-k', '--keywords', nargs='?', help="Mots clés à rechercher (recherche exclusive), eg: --keywords PHP,python,java", required=True)
         parser.add_argument('-t', '--test', nargs='?', help="Envoyer quelques mails de test à l'adresse indiquée, eg: --test moi@domain.tld", required=False)
         parser.add_argument('-s', '--send', nargs='?', help="Envoyer les mails à tous les destinataires de la base d'adresses, eg: --send moi@gmail.com", required=False)
-        parser.add_argument('-h', '--help', help="Afficher l'aide", required=False, action='store_true')
         self.args = parser.parse_args()
         if self.args.help:
             parser.print_help()
