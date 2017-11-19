@@ -188,7 +188,7 @@ class JobFinder():
                             part = MIMEApplication(cv.read(), Name=file)
                             part['Content-Disposition'] = 'attachment; filename="%s"' % file
                             msg.attach(part)
-                msg['Subject'] = "Offre d'emploi %s" % offer_id
+                msg['Subject'] = "Candidature spontanée"
                 msg['From'] = gmail_login
                 msg['To'] = mail_to
                 self.log("Envoi d'un mail à %s (%s) - Offre %s" % (contact, mail_to, offer_id))
